@@ -1,2 +1,9 @@
 ---
 - name : Create vSphere Cluster
+  local_action:
+    module: vmware_cluster
+    datacenter_name: datacenter
+    cluster_name: ClusterAnsible
+    enable_ha: no
+    enable_drs: no
+    enable_vsan: no
