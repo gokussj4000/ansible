@@ -20,4 +20,4 @@
         scsi: paravirtual
       networks:
       - name: LAN 1234
-      device_type: e1000
+        device_type: e1000
