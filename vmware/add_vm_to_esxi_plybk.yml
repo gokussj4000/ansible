@@ -7,7 +7,7 @@
       datacenter: Bicat.serhat
       folder: /vm/
       esxi_hostname: "{{ esxi_hostname }}"
-      name: "{{ virtual_machine_name }}"
+      name: BicatSerhat
       state: poweredon
       guest_id: debian8_64Guest
       disk:
