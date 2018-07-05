@@ -8,7 +8,7 @@
       folder: /
       esxi_hostname: "{{ esxi_hostname }}"
       name: "{{ virtual_machine_name }}"
-      state: poweredon
+      state: poweredoff
       guest_id: debian6_64Guest
       disk:
       - size_gb: 5
