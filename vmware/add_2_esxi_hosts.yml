@@ -1,5 +1,5 @@
 ---
-- name : Add 2 ESXi Host
+- name: Add 2 ESXi Host
   hosts: localhost
  
  vars_prompt:
