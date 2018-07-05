@@ -6,7 +6,8 @@
   - name: Create Cluster Task
     local_action:
       module: vmware_cluster
-      datacenter_name: 'Bicat.serhat'
+      datacenter_name: Bicat.serhat
+      cluster_name: Bicat.serhat.Cluster
       enable_ha: yes
       enable_drs: no
       enable_vsan: no
