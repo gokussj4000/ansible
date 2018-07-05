@@ -14,3 +14,7 @@
       - size_gb: 5
         type: thin
         datastore: datastore1
+      hardware:
+        memory_mb: 256
+        num_cpus: 1
+        scsi: paravirtual
