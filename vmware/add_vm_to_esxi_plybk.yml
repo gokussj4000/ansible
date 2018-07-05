@@ -20,3 +20,4 @@
       networks:
       - name: LAN 1234
         device_type: e1000
+#    delegate_to: localhost
