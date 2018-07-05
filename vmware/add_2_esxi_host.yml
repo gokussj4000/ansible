@@ -1,0 +1,43 @@
+---
+- name : Add 2 ESXi Host
+  hosts: localhost
+  
+  vars_prompt:
+    - name: "esxi_hostname1"
+      prompt: "Enter First ESXi's hostname"
+      private: no
+    - name: "esxi_username1"
+      prompt: "Enter First ESXi's username"
+      private: no
+    - name: "esxi_password1"
+      prompt: "Enter First ESXi's password"
+      private: yes
+    - name: "esxi_hostname2"
+      prompt: "Enter Second ESXi's hostname"
+      private: no
+    - name: "esxi_username2"
+      prompt: "Enter Second ESXi's username"
+      private: no
+    - name: "esxi_password2"
+      prompt: "Enter Second ESXi's password"
+      private: yes
+      
+  tasks:
+  - name: Add First ESXi Host to vCenter
+    vmware_host:
+      datacenter_name: Bicat.serhat
+      cluster_name: Bicat.serhat.Cluster
+      esxi_hostname: '{{ esxi_hostname1 }}'
+      esxi_username: '{{ esxi_username1 }}'
+      esxi_password: '{{ esxi_password1 }}'
+      state: present
+      
+  - name: Add Second ESXi Host to vCenter
+    vmware_host:
+      datacenter_name: Bicat.serhat
+      cluster_name: Bicat.serhat.Cluster
+      esxi_hostname: '{{ esxi_hostname2 }}'
+      esxi_username: '{{ esxi_username2 }}'
+      esxi_password: '{{ esxi_password2 }}'
+      state: present
+ #    delegate_to: localhost
