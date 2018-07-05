@@ -5,7 +5,6 @@
   - name: Add the VM to ESXi
     vmware_guest:
       datacenter: "{{ datacenter_name }}"
-      cluster: "{{ cluster_name }}"
       esxi_hostname: "{{ esxi_hostname }}"
       name: "{{ virtual_machine_name }}"
       state: poweredon
