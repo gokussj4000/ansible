@@ -10,3 +10,7 @@
       name: BicatSerhat
       state: poweredon
       guest_id: debian8_64Guest
+      disk:
+      - size_gb: 5
+        type: thin
+        datastore: datastore1
