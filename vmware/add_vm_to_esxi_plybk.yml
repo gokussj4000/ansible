@@ -1,0 +1,20 @@
+- name: Add Virtual Machine to ESXi
+  hosts: localhost
+  
+  tasks:
+  - name: Add the VM to ESXi
+    vmware_guest:
+      name: "{{ virtual_machine_name }}"
+      state: poweredon
+      guest_id: debian8_64Guest
+      esxi_hostname: "{{ esxi_hostname }}"
+      disk:
+      - size_gb: 5
+        type: thin
+        datastore: datastore1
+      hardware:
+        memory_mb: 256
+        num_cpus: 1
+        scsi: paravirtual
+        
+        
