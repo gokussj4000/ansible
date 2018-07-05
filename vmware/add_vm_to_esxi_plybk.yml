@@ -5,7 +5,7 @@
   - name: Add the VM to ESXi
     vmware_guest:
       datacenter: Bicat.serhat
-      folder: /vm/
+      folder: /
       esxi_hostname: "{{ esxi_hostname }}"
       name: BicatSerhat
       state: poweredon
