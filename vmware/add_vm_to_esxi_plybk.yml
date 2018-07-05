@@ -4,10 +4,10 @@
   tasks:
   - name: Add the VM to ESXi
     vmware_guest:
-      datacenter: Bicat.serhat
+      datacenter: "{{ dc_name }}"
       folder: /
       esxi_hostname: "{{ esxi_hostname }}"
-      name: BicatSerhat
+      name: "{{ virtual_machine_name }}"
       state: poweredon
       guest_id: debian6_64Guest
       disk:
@@ -16,4 +16,9 @@
         datastore: datastore1
       hardware:
         num_cpus: 1
-        memory_mb: 512
+        num_cpu_cores_per_socket: 1
+        memory_mb: 256
+        scsi: paravirtual
+      networks:
+      - name: LAN 1234
+        device_type: e1000
