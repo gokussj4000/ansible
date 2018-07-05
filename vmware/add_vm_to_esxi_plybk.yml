@@ -4,7 +4,7 @@
   tasks:
   - name: Add the VM to ESXi
     vmware_guest:
-      folder: "{{ folder_name }}"
+      folder: "{{ folder_path }}"
       esxi_hostname: "{{ esxi_hostname }}"
       name: "{{ virtual_machine_name }}"
       state: poweredon
