@@ -4,10 +4,12 @@
   tasks:
   - name: Add the VM to ESXi
     vmware_guest:
+      datacenter: "{{ datacenter_name }}"
+      cluster: "{{ cluster_name }}"
+      esxi_hostname: "{{ esxi_hostname }}"
       name: "{{ virtual_machine_name }}"
       state: poweredon
       guest_id: debian8_64Guest
-      esxi_hostname: "{{ esxi_hostname }}"
       disk:
       - size_gb: 5
         type: thin
@@ -16,5 +18,6 @@
         memory_mb: 256
         num_cpus: 1
         scsi: paravirtual
-        
-        
+      networks:
+      - name: LAN 1234
+      device_type: e1000
