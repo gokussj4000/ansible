@@ -4,8 +4,8 @@
   tasks:
   - name: Add the VM to ESXi
     vmware_guest:
-      datacenter: "{{ datacenter_name }}"
-      folder: "{{ folder_path }}"
+      datacenter: Bicat.serhat
+      folder: /vm/
       esxi_hostname: "{{ esxi_hostname }}"
       name: "{{ virtual_machine_name }}"
       state: poweredon
